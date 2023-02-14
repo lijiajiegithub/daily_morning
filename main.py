@@ -43,8 +43,8 @@ def get_weather():
   res = requests.get(url, timeout=100).json()
   if res is None:
     return None
-  if res['code'] != 0:
-    return None
+#   if res['code'] != 0:
+#     return None
   weather = res['data']['list'][0]
   return weather
 
