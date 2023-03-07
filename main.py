@@ -38,7 +38,7 @@ def get_weather():
     print('请设置城市')
     return None
 #   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
-  url = "https://v0.yiketianqi.com/api?unescape=1&version=v91&appid=43656176&appsecret=I42og6Lm&ext=&cityid=&city=" +city
+  url = "https://restapi.amap.com/v3/weather/weatherInfo?city=411322&key=8f42bff8c003bb1ed9839730431fbc76&extensions=base"
   # OpenRefactory Warning: The 'requests.get' method does not use any 'timeout' threshold which may cause program to hang indefinitely.
   res = requests.get(url, timeout=100).json()
   if res is None:
@@ -119,38 +119,38 @@ data = {
     "value": get_week_day(),
     "color": get_random_color()
   },
-#   "weather": {
-#     "value": weather['weather'],
-#     "color": get_random_color()
-#   },
-#   "humidity": {
-#     "value": weather['humidity'],
-#     "color": get_random_color()
-#   },
-#   "wind": {
-#     "value": weather['wind'],
-#     "color": get_random_color()
-#   },
-#   "air_data": {
-#     "value": weather['airData'],
-#     "color": get_random_color()
-#   },
-#   "air_quality": {
-#     "value": weather['airQuality'],
-#     "color": get_random_color()
-#   },
-#   "temperature": {
-#     "value": math.floor(weather['temp']),
-#     "color": get_random_color()
-#   },
-#   "highest": {
-#     "value": math.floor(weather['high']),
-#     "color": get_random_color()
-#   },
-#   "lowest": {
-#     "value": math.floor(weather['low']),
-#     "color": get_random_color()
-#   },
+  "weather": {
+    "value": weather['weather'],
+    "color": get_random_color()
+  },
+  "humidity": {
+    "value": weather['humidity'],
+    "color": get_random_color()
+  },
+  "wind": {
+    "value": weather['wind'],
+    "color": get_random_color()
+  },
+  "air_data": {
+    "value": weather['airData'],
+    "color": get_random_color()
+  },
+  "air_quality": {
+    "value": weather['airQuality'],
+    "color": get_random_color()
+  },
+  "temperature": {
+    "value": math.floor(weather['temperature']),
+    "color": get_random_color()
+  },
+  "highest": {
+    "value": math.floor(weather['high']),
+    "color": get_random_color()
+  },
+  "lowest": {
+    "value": math.floor(weather['low']),
+    "color": get_random_color()
+  },
   "love_days": {
     "value": get_memorial_days_count(),
     "color": get_random_color()
